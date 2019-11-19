@@ -1,5 +1,6 @@
 ## example
 ## 资料
+[参考](https://elasticsearch.cn/)
 [spring文档](https://spring.io/guides)
 [spring web](https://spring.io/guides/gs/serving-web-content/（前端）)
 [Boostrap](https://v3.bootcss.com/)
@@ -10,8 +11,11 @@
 
 ## 工具
 [git](https://github.com/shihaixiu/shihaixiu)
+[flyway](https://flywaydb.org/getstarted/firststeps/maven)
 
 
 
 ##脚本
-mvn flyway:migrate
+```mvn
+mvn flyway:migrat
+```
