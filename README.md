@@ -13,3 +13,5 @@
 
 
 
+##脚本
+mvn flyway:migrate
