@@ -67,6 +67,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.6</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -80,7 +86,7 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.2.4</version>
                 <configuration>
-                    <url>jdbc:h2:~/shihaixiu</url>
+                    <url>jdbc:h2:~/shihaixiuExample</url>
                     <user>sa</user>
                     <password>123</password>
                 </configuration>
