@@ -11,5 +11,18 @@
 ## 工具
 [git](https://github.com/shihaixiu/shihaixiu)
 
+##sql
+create table user
+(
+	id int auto_increment,
+	name varchar(50),
+	account_id varchar(100),
+	token char(50),
+	gmt_create bigint,
+	gmt_modified bigint,
+	constraint user_pk
+		primary key (id)
+);
+
 
 
