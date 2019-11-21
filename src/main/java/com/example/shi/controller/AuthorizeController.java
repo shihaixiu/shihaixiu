@@ -31,10 +31,9 @@ public class AuthorizeController {
     private String redirectUri;
 
 
-
     @GetMapping("/callback")
-    public String callback(@RequestParam(name="code") String code,
-                           @RequestParam(name="state") String state,
+    public String callback(@RequestParam(name = "code") String code,
+                           @RequestParam(name = "state") String state,
                            HttpServletResponse response) {
         AccessTokenDto accessTokenDto = new AccessTokenDto();
         accessTokenDto.setCode(code);
@@ -43,8 +42,8 @@ public class AuthorizeController {
         accessTokenDto.setClient_id(clientId);
         accessTokenDto.setClient_secret(clientSecret);
         String accessToken = gitHubProvide.getAccessToken(accessTokenDto);
-        GithubUserDto gitHubUser=gitHubProvide.getUser(accessToken);
-        if(gitHubUser!=null){
+        GithubUserDto gitHubUser = gitHubProvide.getUser(accessToken);
+        if (gitHubUser != null) {
             //登陆成功
             User user = new User();
             String token = UUID.randomUUID().toString();
@@ -55,9 +54,9 @@ public class AuthorizeController {
             user.setGmtModified(user.getGmtCreate());
             user.setAvatarUrl(gitHubUser.getAvatar_url());
             userMapper.insert(user);
-            response.addCookie(new Cookie("token",token));
+            response.addCookie(new Cookie("token", token));
             return "redirect:/";
-        }else{
+        } else {
             //登陆失败
             return "redirect:/";
         }
