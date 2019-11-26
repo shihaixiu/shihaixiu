@@ -9,6 +9,7 @@
 [mybatis](http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
 [spring-boot](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#bootfeatures-embedded-database-support)
 [thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html)
+[拦截器](https://docs.spring.io/spring/docs/5.0.3.RELEASE/spring-framework-reference/web.html)
 
 ## 工具
 [git](https://github.com/shihaixiu/shihaixiu)
