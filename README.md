@@ -15,10 +15,13 @@
 [git](https://github.com/shihaixiu/shihaixiu)
 [flyway](https://flywaydb.org/getstarted/firststeps/maven)
 [lombok](https://projectlombok.org)
+[mybatis generator](http://mybatis.org/generator/configreference/columnOverride.html)
 
 
 
 ##脚本
 ```mvn
 mvn flyway:migrate
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
+

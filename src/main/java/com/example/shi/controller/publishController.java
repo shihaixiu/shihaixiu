@@ -3,6 +3,7 @@ package com.example.shi.controller;
 import com.example.shi.mapper.QuestionMapper;
 import com.example.shi.model.Question;
 import com.example.shi.model.User;
+import com.example.shi.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class publishController {
     @Autowired
-    private QuestionMapper questionMapper;
+    private QuestionService questionService;
 
     @GetMapping("/publish")
     public String publish() {
@@ -59,7 +60,7 @@ public class publishController {
         question.setCreator(user.getId());
         question.setGmtCreate(System.currentTimeMillis());
         question.setGmtModified(question.getGmtCreate());
-        questionMapper.create(question);
+        questionService.createrOrUpdate(question);
         return "redirect:/";
     }
 }
